@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:switch="${categories}">
+        <h2 th:case="null">Not categories yet!</h2>
+        <div th:case="*">
+            <div th:each="category : ${categories}">
+                <span th:text="${category.getCategoryName()}"></span>
+                <a th:href="@{/products/{categoryId}(categoryId=${category.getId()})}">View Products</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" th:action="@{/products/add}">
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" name="productName">
+        <label for="price">Price</label>
+        <input type="text" id="price" name="price">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
